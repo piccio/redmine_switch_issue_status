@@ -10,7 +10,7 @@ Redmine::Plugin.register :redmine_switch_issue_status do
   description <<-eos
     automatically switch status of the issue from a starting status to another status when updating the description or adding a comment
   eos
-  version '1.0.0'
+  version '1.0.1'
   url 'https://github.com/piccio/redmine_switch_issue_status'
   author_url 'https://github.com/piccio'
 

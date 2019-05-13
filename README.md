@@ -1,7 +1,7 @@
 redmine_switch_issue_status
 =
 
-automatically switch status of the issue from a starting status to another status when updating the description or adding a comment
+automatically switch status of the issue from a starting status to another status when *the assignee* updates the description or adding a comment
 
 *from status* and *to status* are configurable
 
