@@ -1,0 +1,7 @@
+# English strings go here for Rails i18n
+en:
+  switch_issue_status:
+    from_status: switch from status
+    from_status_info: select the status that you want to automatically switch issue from when updating the description or adding a comment
+    to_status: switch to status
+    to_status_info: select the status that you want to automatically switch issue to when updating the description or adding a comment

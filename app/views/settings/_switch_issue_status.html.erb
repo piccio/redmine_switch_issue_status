@@ -1,0 +1,15 @@
+<p>
+  <%= label 'settings[from_status]', l(:from_status, scope: :switch_issue_status) %>
+  <%= select_tag 'settings[from_status]',
+                 options_from_collection_for_select(IssueStatus.all, 'id', 'name', @settings['from_status']),
+                 include_blank: true %>
+  <%= content_tag :em, l(:from_status_info, scope: :switch_issue_status), class: 'info' %>
+</p>
+
+<p>
+  <%= label 'settings[to_status]', l(:to_status, scope: :switch_issue_status) %>
+  <%= select_tag 'settings[to_status]',
+                 options_from_collection_for_select(IssueStatus.all, 'id', 'name', @settings['to_status']),
+                 include_blank: true %>
+  <%= content_tag :em, l(:to_status_info, scope: :switch_issue_status), class: 'info' %>
+</p>
