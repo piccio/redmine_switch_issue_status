@@ -5,4 +5,4 @@ automatically switch status of the issue from a starting status to another statu
 
 *from status* and *to status* are configurable
 
-tested on redmine 3.4.4
+tested on redmine 3.4.4 and on redmine 4.0.4

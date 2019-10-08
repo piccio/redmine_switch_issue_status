@@ -1,13 +1,8 @@
-require 'redmine_switch_issue_status/issues_controller_patch'
-require 'redmine_switch_issue_status/mail_handler_patch'
+require 'redmine_switch_issue_status/journal_patch'
 
 Rails.configuration.to_prepare do
-  unless IssuesController.included_modules.include? RedmineSwitchIssueStatus::IssuesControllerPatch
-    IssuesController.prepend(RedmineSwitchIssueStatus::IssuesControllerPatch)
-  end
-
-  unless MailHandler.included_modules.include? RedmineSwitchIssueStatus::MailHandlerPatch
-    MailHandler.prepend(RedmineSwitchIssueStatus::MailHandlerPatch)
+  unless Journal.included_modules.include? RedmineSwitchIssueStatus::JournalPatch
+    Journal.prepend(RedmineSwitchIssueStatus::JournalPatch)
   end
 end
 
@@ -17,7 +12,7 @@ Redmine::Plugin.register :redmine_switch_issue_status do
   description <<-eos
     automatically switch status of the issue from a starting status to another status when updating the description or adding a comment
   eos
-  version '1.1.0'
+  version '2.0.0'
   url 'https://github.com/piccio/redmine_switch_issue_status'
   author_url 'https://github.com/piccio'
 
